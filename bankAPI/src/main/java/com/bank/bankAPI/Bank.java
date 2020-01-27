@@ -45,14 +45,14 @@ public class Bank {
 
     @GetMapping("/push")
     @ResponseBody
-    public String getFoos(@RequestParam String amount) {
+    public String getPush(@RequestParam String amount) {
         push(BankApiApplication.bankQueue, amount);
         return "Array: " + BankApiApplication.bankQueue + "\nItem pushed: " + amount;
     }
 
     @GetMapping("/pop")
     @ResponseBody
-    public String getFaas() {
+    public String getPop() {
         String data = itemRemoved();
         pop(BankApiApplication.bankQueue);
         return "Array: " + BankApiApplication.bankQueue + "\nItem removed: " + data ;
@@ -60,7 +60,7 @@ public class Bank {
 
     @GetMapping("/clear")
     @ResponseBody
-    public String getFuus() {
+    public String getClear() {
         clear(BankApiApplication.bankQueue);
         return "The array was cleared : " + BankApiApplication.bankQueue;
     }
