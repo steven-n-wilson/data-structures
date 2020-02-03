@@ -6,5 +6,5 @@
 2. Rest App: Advent of Code
   - https://youtu.be/Uwnj56f7ATk
   
-3. Bank API Queue:
-  - https://youtu.be/6N0xNhivOt8
+3. Bank API Array (Using Arrays):
+  - https://youtu.be/rztwcg8v4sY
