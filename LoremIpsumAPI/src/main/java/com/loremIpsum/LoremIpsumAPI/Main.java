@@ -1,15 +1,33 @@
 package com.loremIpsum.LoremIpsumAPI;
 
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
+@RestController
 public class Main {
 
-    public static void countChars(String loremText) {
+    public static StringBuilder histrogram(int count){
+        String clean = " ";
+        StringBuilder newHistrogram = new StringBuilder(String.valueOf(clean.charAt(0)));
+        for(int i= 1; i<= count; i++)
+            newHistrogram.append("*").append(clean.charAt(0));
+        System.out.println(newHistrogram);
+        return newHistrogram;
+    }
+
+    public static int countChars(String loremText) {
         HashMap<Character, Integer> charCountMap
                 = new HashMap<Character, Integer>();
 
         loremText = loremText.toLowerCase();
+        loremText = loremText.replaceAll("\\s+","");
+        loremText = loremText.replaceAll("\\W","");
 
         char[] arrLoremText = loremText.toCharArray();
 
@@ -22,15 +40,22 @@ public class Main {
             }
         }
 
-        for(Map.Entry entry: charCountMap.entrySet()){
-            System.out.println(entry.getKey() + " " + entry.getValue());
+        for(Map.Entry entry: charCountMap.entrySet()) {
+            System.out.print(entry.getKey() + ": " + entry.getValue());
+            histrogram((Integer) entry.getValue());
         }
 
+        return 0;
     }
 
     public static void main(String[] args){
-        String loremText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
+    }
+
+    @GetMapping("/count")
+    @ResponseBody
+    public String getCount(@RequestParam String loremText) {
         countChars(loremText);
+        return "Generated Count: " + countChars(loremText);
     }
 
 }
