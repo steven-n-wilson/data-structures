@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.io.Serializable;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
@@ -21,7 +22,7 @@ public class Main {
         return newHistrogram;
     }
 
-    public static int countChars(String loremText) {
+    public static Serializable countChars(String loremText) {
         HashMap<Character, Integer> charCountMap
                 = new HashMap<Character, Integer>();
 
@@ -43,9 +44,10 @@ public class Main {
         for(Map.Entry entry: charCountMap.entrySet()) {
             System.out.print(entry.getKey() + ": " + entry.getValue());
             histrogram((Integer) entry.getValue());
+
         }
 
-        return 0;
+        return "Data";
     }
 
     public static void main(String[] args){
