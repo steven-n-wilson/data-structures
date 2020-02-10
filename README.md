@@ -10,3 +10,6 @@
   - https://youtu.be/rztwcg8v4sY
  
  4. debitsCredits (Did not finish)
+
+5. loremIpsum API:
+https://youtu.be/JuAWE7u6aDA
