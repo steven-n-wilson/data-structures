@@ -6,20 +6,25 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.io.Serializable;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 @RestController
 public class Main {
+
+    public static ArrayList<String> newArray = new ArrayList<>(Arrays.asList());
 
     public static StringBuilder histrogram(int count){
         String clean = " ";
         StringBuilder newHistrogram = new StringBuilder(String.valueOf(clean.charAt(0)));
         for(int i= 1; i<= count; i++)
             newHistrogram.append("*").append(clean.charAt(0));
-        System.out.println(newHistrogram);
+//        System.out.println(newHistrogram);
         return newHistrogram;
+    }
+
+    public static ArrayList<String> addX(ArrayList<String> array, String item) {
+        array.add(item);
+        return array;
     }
 
     public static Serializable countChars(String loremText) {
@@ -42,12 +47,19 @@ public class Main {
         }
 
         for(Map.Entry entry: charCountMap.entrySet()) {
-            System.out.print(entry.getKey() + ": " + entry.getValue());
-            histrogram((Integer) entry.getValue());
+            Object value = entry.getKey() + ": " + entry.getValue();
+            ArrayList<String> data = addX(newArray, value.toString() + histrogram((Integer) entry.getValue()));
 
+            int size = data.size();
+            if (size == 10 ){
+                System.out.println(data);
+                return data;
+            }
+
+//            System.out.print(entry.getKey() + ": " + entry.getValue());
+//            histrogram((Integer) entry.getValue());
         }
-
-        return "Data";
+        return "data";
     }
 
     public static void main(String[] args){
