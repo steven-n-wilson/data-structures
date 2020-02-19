@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <Author>steven wilson</Author>
+  <LastAuthor>steven wilson</LastAuthor>
+  <Created>2020-02-17T02:10:02Z</Created>
+  <LastSaved>2020-02-17T02:12:24Z</LastSaved>
+  <Version>16.00</Version>
+ </DocumentProperties>
+ <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
+  <AllowPNG/>
+ </OfficeDocumentSettings>
+ <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+  <WindowHeight>8730</WindowHeight>
+  <WindowWidth>23040</WindowWidth>
+  <WindowTopX>32767</WindowTopX>
+  <WindowTopY>32767</WindowTopY>
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+ </ExcelWorkbook>
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s66">
+   <Font ss:FontName="Arial" x:Family="Swiss" ss:Size="11" ss:Color="#505050"/>
+  </Style>
+ </Styles>
+ <Worksheet ss:Name="Sheet1">
+  <Table ss:ExpandedColumnCount="1" ss:ExpandedRowCount="8" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultColumnWidth="50.4" ss:DefaultRowHeight="14.4">
+   <Row>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">point?y=5&amp;x=-6</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">point?y=-7&amp;x=12</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">point?y=-345&amp;x=-10</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">point?y=764&amp;x=124</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">point?y=88&amp;x=-77</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">point?y=0x=0</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">point?y=764&amp;x=-2</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">point?y=5&amp;x=5</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Header x:Margin="0.3"/>
+    <Footer x:Margin="0.3"/>
+    <PageMargins x:Bottom="0.75" x:Left="0.7" x:Right="0.7" x:Top="0.75"/>
+   </PageSetup>
+   <Print>
+    <ValidPrinterInfo/>
+    <VerticalResolution>0</VerticalResolution>
+   </Print>
+   <Selected/>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>7</ActiveRow>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+</Workbook>
