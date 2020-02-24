@@ -11,7 +11,8 @@
  
  4. debitsCredits (Did not finish)
 
-5. loremIpsum API:
-https://youtu.be/JuAWE7u6aDA
+5. loremIpsum API: https://youtu.be/JuAWE7u6aDA
 
 6. calcQuadrant: https://youtu.be/F38M5N9A2_o
+
+7. LinkedLists: https://youtu.be/x2fWKVcZxyU
