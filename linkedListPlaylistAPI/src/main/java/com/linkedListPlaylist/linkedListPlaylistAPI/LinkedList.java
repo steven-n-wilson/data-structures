@@ -1,4 +1,7 @@
 package com.linkedListPlaylist.linkedListPlaylistAPI;
+import org.springframework.web.bind.annotation.*;
+
+import static com.linkedListPlaylist.linkedListPlaylistAPI.LinkedList.add;
 
 public class LinkedList {
 
@@ -8,7 +11,6 @@ public class LinkedList {
         String song;
         Node next;
 
-        //        Crear constructor
         Node(String s) {
             song = s;
             next = null;
@@ -16,7 +18,6 @@ public class LinkedList {
     }
 
 
-// Method to add new node
     public static LinkedList add(LinkedList playlist, String song){
         Node newNode= new Node(song);
         newNode.next= null;
@@ -34,55 +35,102 @@ public class LinkedList {
         return playlist;
     }
 
-    public static void printList(LinkedList playlist){
+    public static String printList(LinkedList playlist){
         Node currentNode = playlist.head;
         System.out.print("Playlist: ");
 
         while (currentNode != null){
-            System.out.print(currentNode.song + ",");
+            System.out.print(currentNode.song + ", ");
 
             currentNode = currentNode.next;
         }
+        return playlist.toString();
     }
 
-    public static void playNow(LinkedList playlist){
+    public static String playNow(LinkedList playlist){
         Node currentNode = playlist.head;
         System.out.print("\nNow playing: ");
 
         if (currentNode != null){
             System.out.print(currentNode.song + " ");
+            return currentNode.song;
         }
+        return null;
     }
 
-    public static void playNext(LinkedList playlist){
+    public static String playNext(LinkedList playlist){
         Node currentNode = playlist.head;
         System.out.print("\nPlay next: ");
-
         if (currentNode != null){
             currentNode = currentNode.next;
             System.out.print(currentNode.song + " ");
+            return currentNode.song;
         }
+        return null;
     }
 
-    public static void playPrevious(LinkedList playlist){
+    public int size() {
+        int size = 0;
+        for(Node n = head; n.next != null; n = n.next)
+            size++;
+        return size;
+        }
+
+    public static String playPrevious(LinkedList playlist){
         Node currentNode = playlist.head;
         System.out.print("\nPlay previous: ");
-
-        if (currentNode != null){
+        int i =-1;
+        while (i != playlist.size()){
             currentNode = currentNode.next;
-            System.out.print(currentNode.song + " ");
+            i++;
+            if (i+1 == playlist.size()){
+                System.out.print(currentNode.song + " ");
+                return currentNode.song;
+            }
         }
+        return null;
+    }
+}
+@RestController
+class Play {
+
+    LinkedList list = new LinkedList();
+
+    @GetMapping("/add")
+    @ResponseBody
+    public String callMethod(@RequestParam String song){
+
+        list = add(list,song);
+
+        return "The song was added, " + song;
+
     }
 
-    public static void main(String[] args){
-        LinkedList list = new LinkedList();
+    @GetMapping("/play")
+    @ResponseBody
+    public String callMethodPlay(){
+        return "The song playing, " + LinkedList.playNow(list);
 
-        list = add(list, "wonderwall");
-        list = add(list, "heathens");
-        list = add(list, "unknown to you");
-
-        printList(list);
-        playNow(list);
-        playNext(list);
     }
+
+    @GetMapping("/playNext")
+    @ResponseBody
+    public String callMethodPlayNext(){
+        return "Playing next, " + LinkedList.playNext(list);
+
+    }
+
+    @GetMapping("/playPrevious")
+    @ResponseBody
+    public String callMethodPlayPrevious(){
+        return "Playing next, " + LinkedList.playPrevious(list);
+
+    }
+    @GetMapping("/playlist")
+    @ResponseBody
+    public String callMethodPrintList(){
+        return "Playlist, " + LinkedList.printList(list);
+
+    }
+
 }
