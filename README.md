@@ -14,4 +14,4 @@
 
 7. LinkedLists: https://youtu.be/x2fWKVcZxyU
 
-8. queueRepartidores: https://youtu.be/9iFcU2szv34
+8. queueRepartidores: https://youtu.be/8lGO9r5ZE6o
