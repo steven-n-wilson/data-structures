@@ -1,10 +1,10 @@
-package com.queueRepartidores.queueRepartidores;
+package com.linkedListPlaylist.linkedListPlaylistAPI;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class QueueRepartidoresApplicationTests {
+class LinkedListPlaylistApiApplicationTests {
 
 	@Test
 	void contextLoads() {

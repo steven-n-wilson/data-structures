@@ -32,6 +32,7 @@ public class LinkedList {
             }
             last.next = newNode;
         }
+
         return list;
     }
 

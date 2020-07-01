@@ -1,13 +1,12 @@
-package com.queueRepartidores.queueRepartidores;
+package com.linkedListPlaylist.linkedListPlaylistAPI;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class QueueRepartidoresApplication {
+public class LinkedListPlaylistApiApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(QueueRepartidoresApplication.class, args);
-	}
+		SpringApplication.run(LinkedListPlaylistApiApplication.class, args); }
 
 }

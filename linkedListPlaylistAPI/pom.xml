@@ -5,13 +5,13 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.2.5.RELEASE</version>
+		<version>2.2.4.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.queueRepartidores</groupId>
-	<artifactId>queueRepartidores</artifactId>
+	<groupId>com.linkedListPlaylist</groupId>
+	<artifactId>linkedListPlaylistAPI</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>queueRepartidores</name>
+	<name>linkedListPlaylistAPI</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
@@ -38,14 +38,10 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-            <version>RELEASE</version>
-            <scope>compile</scope>
         </dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
-			<version>2.2.5.RELEASE</version>
-			<scope>compile</scope>
 		</dependency>
 	</dependencies>
 
